@@ -1,3 +1,20 @@
 .App {
+  width: 800px;
+  margin: 0 auto;
   text-align: center;
+}
+.link-container {
+  width: 25%;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.link-btn {
+  text-decoration: none;
+  color: gray;
+}
+.btn1 {
+  border-bottom: 2px solid goldenrod;
+  padding-bottom: 5px;
 }
