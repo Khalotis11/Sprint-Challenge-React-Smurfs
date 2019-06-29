@@ -2,13 +2,14 @@
   width: 800px;
   margin: 0 auto;
   text-align: center;
+  background-color: white;
 }
 .link-container {
   width: 25%;
   font-size: 18px;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .link-btn {
   text-decoration: none;
@@ -17,4 +18,28 @@
 .btn1 {
   border-bottom: 2px solid goldenrod;
   padding-bottom: 5px;
+}
+.btn2:hover {
+  border-bottom: 2px solid goldenrod;
+}
+body {
+  background-color: #d8d8d8;
+}
+.SmurfForm {
+  height: 700px;
+  margin-top: 40px;
+}
+input {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 17px;
+  background-color: #fdd041;
+  color: gray;
+  border-radius: 3px;
+  margin-top: 10px;
+  /* font-weight: bold; */
 }

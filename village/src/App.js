@@ -4,7 +4,7 @@ import "./App.css";
 import SmurfForm from "./components/SmurfForm";
 import Smurfs from "./components/Smurfs";
 import axios from "axios";
-import { Route, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -28,24 +28,30 @@ class App extends Component {
         console.log(err);
       });
   }
+  newSmurfs = smurfs => {
+    this.setState({ smurfs });
+  };
   render() {
     return (
       <div className="App">
         <div className="link-container">
-          <Link className="link-btn btn1" to="/">
+          <NavLink className="link-btn btn1" to="/">
             Home
-          </Link>
-          <Link className="link-btn btn2" to="/smurf-form">
+          </NavLink>
+          <NavLink className="link-btn btn2" to="/smurf-form">
             Add Smurfs
-          </Link>
+          </NavLink>
         </div>
         <div>
           <Route
             exact
             path="/"
-            render={props => <Smurfs smurfs={this.state.smurfs} />}
+            render={props => <Smurfs {...props} smurfs={this.state.smurfs} />}
           />
-          <Route path="/smurf-form" component={SmurfForm} />
+          <Route
+            path="/smurf-form"
+            render={props => <SmurfForm {...props} newSmurf={this.newSmurfs} />}
+          />
         </div>
       </div>
     );
